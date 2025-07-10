@@ -52,8 +52,10 @@ body{
   display:flex;
   justify-content: space-between;
   align-items: center;
-  /* padding-bottom: 2rem; */
+ /* padding-bottom: 2rem; */
 } 
+
+
 .logo {
   display: flex;
   align-items: center;
@@ -67,14 +69,14 @@ body{
   color: #fed700;
   font-size: 19.5px;
   position: absolute; 
-  top: 60%;
-  left: 100%; 
+  top: 50%;
+  left: 80%; 
   transform: translate(-50%, -50%); 
   z-index: 1; 
 }
 
 .signature {
-  width: 100px; 
+  width: 150px; 
   height:auto; 
   margin-right: 10px; 
 }
@@ -356,6 +358,7 @@ profile-photo .img{
     width: 100%;
     position: relative;
     padding: 25px;
+    margin-top: 25px;
     text-align: center;
     flex-basis: 32%;
     transition: .3s;
