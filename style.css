@@ -584,23 +584,28 @@ body {
     display: block;
   }
 
-  .header ul {
-    display: none;
-    flex-direction: column;
-    background-color: #202020;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    width: 200px;
-    padding: 10px;
-    border: 1px solid #333;
-    border-radius: 5px;
-    z-index: 999;
-  }
+.header ul {
+  max-height: 0;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;  
+  background-color: #202020;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  width: 200px;
+  padding: 0;
+  border: none;
+  border-radius: 5px;
+  z-index: 999;
+  transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+}
 
-  .header ul.open {
-    display: flex;
-  }
+.header ul.open {
+  max-height: 500px; /* Set a value that can accommodate full height */
+  padding: 10px;
+}
 
   .header ul li {
     margin: 10px 0;

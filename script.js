@@ -1,8 +1,10 @@
 $(document).ready(function () {
   // Toggle mobile menu
-  $(".menu-btn").click(function () {
-    $(".header ul").toggleClass("open");
-  });
+$(".menu-btn").click(function () {
+  $(".navbar").toggleClass("open");
+  $("body").toggleClass("no-scroll");
+});
+
 
   // Sticky header
   $(window).scroll(function () {
