@@ -66,25 +66,44 @@ $(document).ready(function () {
     origin: "bottom",
   });
 
-  // Google Sheets contact form
-  const scriptURL =
-    "https://script.google.com/macros/s/AKfycbzUSaaX3XmlE5m9YLOHOBrRuCh2Ohv49N9bs4bew7xPd1qlgpvXtnudDs5Xhp3jF-Fx/exec";
-  const form = document.forms["submitToGoogleSheet"];
-  const msg = document.getElementById("msg");
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    fetch(scriptURL, { method: "POST", body: new FormData(form) })
-      .then((response) => {
-        msg.innerHTML = "Message sent successfully";
-        setTimeout(function () {
-          msg.innerHTML = "";
-        }, 5000);
-        form.reset();
-      })
-      .catch((error) => console.error("Error!", error.message));
-  });
-});
+  // contact form response on whatsapp 
+
+  document.getElementById("whatsappForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        var name = document.getElementById("name").value.trim();
+        var email = document.getElementById("email").value.trim();
+        var subject = document.getElementById("subject").value.trim();
+        var message = document.getElementById("message").value.trim();
+
+        var fullMessage = `Name: ${name}%0AEmail: ${email}%0ASubject: ${subject}%0AMessage: ${message}`;
+
+        var phoneNumber = "918447564666"; // ← Replace with your WhatsApp number (with country code)
+        var whatsappURL = `https://wa.me/${phoneNumber}?text=${fullMessage}`;
+
+        window.open(whatsappURL, '_blank');
+    });
+
+//   // Google Sheets contact form
+//   const scriptURL =
+//     "https://script.google.com/macros/s/AKfycbzUSaaX3XmlE5m9YLOHOBrRuCh2Ohv49N9bs4bew7xPd1qlgpvXtnudDs5Xhp3jF-Fx/exec";
+//   const form = document.forms["submitToGoogleSheet"];
+//   const msg = document.getElementById("msg");
+
+//   form.addEventListener("submit", (e) => {
+//     e.preventDefault();
+//     fetch(scriptURL, { method: "POST", body: new FormData(form) })
+//       .then((response) => {
+//         msg.innerHTML = "Message sent successfully";
+//         setTimeout(function () {
+//           msg.innerHTML = "";
+//         }, 5000);
+//         form.reset();
+//       })
+//       .catch((error) => console.error("Error!", error.message));
+//   });
+// });
 
 // Update active header link on scroll
 function updateActiveSection() {
@@ -109,4 +128,4 @@ function updateActiveSection() {
       $(".header ul li a[href='#" + target + "']").addClass("active");
     }
   });
-}
+}});
