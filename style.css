@@ -303,13 +303,120 @@ body {
   text-align: justify;
 }
 
+/*---------------------------Certificates---------------------------*/
+.container-certificate {
+  padding: 150px 20px;
+  padding-bottom: 0;
+  max-width: 1170px;
+  margin: auto;
+}
 
+.certificate-content h3.title {
+  color: #fed700;
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.certificate-content .row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.certificate-content .timeline-box {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.certificate-content .timeline {
+  padding: 30px 15px;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  position: relative;
+  background-color: #2b2b2b;
+}
+
+.certificate-content .timeline-item {
+  position: relative;
+  padding-left: 37px;
+  padding-bottom: 50px;
+}
+
+.certificate-content .timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.certificate-content .timeline-item::before {
+  content: "";
+  width: 1px;
+  position: absolute;
+  height: 100%;
+  left: 7px;
+  top: 0;
+  background-color: #fed700;
+}
+
+.certificate-content .circle-dot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #e5e5e5;
+}
+
+.certificate-content .timeline-title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #e5e5e5;
+}
+
+.certificate-content .timeline-text {
+  line-height: 25px;
+  font-size: 16px;
+  text-align: justify;
+  color: #e5e5e5;
+}
+
+.certificate-content .certificate-img {
+  margin-top: 15px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  border: 2px solid #e5e5e5;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.certificate-content .certificate-img:hover {
+  transform: scale(1.05);
+  border-color: #fed700;
+  cursor: pointer;
+}
+
+/* Responsive adjustments for certificates */
+@media only screen and (max-width: 767px) {
+  .container-certificate {
+    padding: 80px 20px;
+  }
+
+  .certificate-content .timeline-item {
+    padding-left: 25px;
+  }
+
+  .certificate-content .timeline-item::before {
+    left: 5px;
+  }
+}
 
 /*---------------------------Projects---------------------------*/
-.project-content{
-  padding: 90px 0;
-  /* color:#fff;  */
-}
+/* .project-content{
+  padding: 0px 0;
+  /* color:#fff;}  */
+
 .project-title{
   margin-top: 60px;
   margin-bottom: 30px;
