@@ -217,7 +217,6 @@ body {
   border-color: #fed700;
 }
 
-
 /*---------------------------Education & Internship---------------------------*/
 
 .education-content .row{
@@ -397,25 +396,7 @@ body {
   cursor: pointer;
 }
 
-/* Responsive adjustments for certificates */
-@media only screen and (max-width: 767px) {
-  .container-certificate {
-    padding: 80px 20px;
-  }
-
-  .certificate-content .timeline-item {
-    padding-left: 25px;
-  }
-
-  .certificate-content .timeline-item::before {
-    left: 5px;
-  }
-}
-
 /*---------------------------Projects---------------------------*/
-/* .project-content{
-  padding: 0px 0;
-  /* color:#fff;}  */
 
 .project-title{
   margin-top: 60px;
@@ -472,7 +453,28 @@ body {
   border-color: #fed700;
 }
 
+.hidden-project {
+  display: none;
+}
 
+/* Style See More button */
+#see-more-btn {
+  display: block;
+  margin: 30px auto 0;
+  background-color: #fed700;
+  border: none;
+  padding: 10px 30px;
+  font-size: 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  color: #333;
+  font-weight: 700;
+  transition: background-color 0.3s;
+}
+
+#see-more-btn:hover {
+  background-color: #e0c300;
+}
 
 /*---------------------------Contact Me---------------------------*/
 .contact-content{
@@ -518,11 +520,6 @@ body {
   display: block;
 }
 
-
-
-
-
-
 /*---------------------------Footer---------------------------*/
 .footer {
     max-width: 950px;
@@ -544,9 +541,6 @@ body {
   .copyright {
     font-size: 12px;
   }
-
-
-
 
  /*------------------- Responsive Design on small screen -------------------*/
 
@@ -652,3 +646,17 @@ body {
   }
 }
 
+/* Responsive adjustments for certificates */
+@media only screen and (max-width: 767px) {
+  .container-certificate {
+    padding: 80px 20px;
+  }
+
+  .certificate-content .timeline-item {
+    padding-left: 25px;
+  }
+
+  .certificate-content .timeline-item::before {
+    left: 5px;
+  }
+}

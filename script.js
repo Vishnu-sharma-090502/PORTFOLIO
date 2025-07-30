@@ -87,25 +87,6 @@ $(".menu-btn").click(function () {
         window.open(whatsappURL, '_blank');
     });
 
-//   // Google Sheets contact form
-//   const scriptURL =
-//     "https://script.google.com/macros/s/AKfycbzUSaaX3XmlE5m9YLOHOBrRuCh2Ohv49N9bs4bew7xPd1qlgpvXtnudDs5Xhp3jF-Fx/exec";
-//   const form = document.forms["submitToGoogleSheet"];
-//   const msg = document.getElementById("msg");
-
-//   form.addEventListener("submit", (e) => {
-//     e.preventDefault();
-//     fetch(scriptURL, { method: "POST", body: new FormData(form) })
-//       .then((response) => {
-//         msg.innerHTML = "Message sent successfully";
-//         setTimeout(function () {
-//           msg.innerHTML = "";
-//         }, 5000);
-//         form.reset();
-//       })
-//       .catch((error) => console.error("Error!", error.message));
-//   });
-// });
 
 // Update active header link on scroll
 function updateActiveSection() {
@@ -131,3 +112,9 @@ function updateActiveSection() {
     }
   });
 }});
+
+// Show hidden projects and hide the See More button when clicked
+$("#see-more-btn").click(function() {
+  $(".hidden-project").slideDown(400); // Smoothly reveal hidden projects
+  $(this).fadeOut(300); // Hide the button smoothly
+});
