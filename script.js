@@ -45,12 +45,15 @@ $(function () {
     });
   }
 
-  // ScrollReveal animations
-  ScrollReveal({ distance: "100px", duration: 2000, delay: 200 });
-  ScrollReveal().reveal(".header a, .profile-photo, .about-content, .experience", { origin: "left" });
-  ScrollReveal().reveal(".navbar ul, .profile-text, .about-skills, .internship, .education", { origin: "right" });
-  ScrollReveal().reveal(".project-title, .contact-title", { origin: "top" });
-  ScrollReveal().reveal(".projects, .contact", { origin: "bottom" });
+// ScrollReveal animations
+ScrollReveal({ distance: "100px", duration: 2000, delay: 200 });
+ScrollReveal().reveal(".header a, .profile-photo, .about-content, .experience", { origin: "left" });
+ScrollReveal().reveal(".navbar ul, .profile-text, .about-skills, .internship, .education", { origin: "right" });
+ScrollReveal().reveal(".project-title, .contact-title, .title", { origin: "top" });
+ScrollReveal().reveal(".projects, .contact, .certificate-content", { origin: "bottom" });
+
+// Certificates timeline items (staggered reveal)
+ScrollReveal().reveal(".timeline-item", { origin: "bottom", interval: 200 });
 
 
 (function(){
