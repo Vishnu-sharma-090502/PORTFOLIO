@@ -1,120 +1,127 @@
-$(document).ready(function () {
+$(function () {
   // Toggle mobile menu
-$(".menu-btn").click(function () {
-  $(".navbar").toggleClass("open");
-  $("body").toggleClass("no-scroll");
-});
+  $(".menu-btn").click(function () {
+    $(".navbar ul").toggleClass("open");
+    $("body").toggleClass("no-scroll");
+  });
 
+  // Close menu on link click + smooth scroll
+  $(".navbar ul li a").click(function (e) {
+    e.preventDefault();
+    const target = $(this).attr("href");
+    const offset = target === "#home" ? 0 : $(target).offset().top - 40;
+
+    $("html, body").animate({ scrollTop: offset }, 500);
+    $(".navbar ul li a").removeClass("active");
+    $(this).addClass("active");
+
+    // close mobile menu
+    $(".navbar ul").removeClass("open");
+    $("body").removeClass("no-scroll");
+  });
 
   // Sticky header
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 1) {
-      $(".header-area").addClass("sticky");
-    } else {
-      $(".header-area").removeClass("sticky");
-    }
-
-    // Update active section
+    $(".header-area").toggleClass("sticky", $(this).scrollTop() > 1);
     updateActiveSection();
   });
 
-  // Smooth scroll to section & active link update
-  $(".header ul li a").click(function (e) {
-    e.preventDefault();
-
-    var target = $(this).attr("href");
-
-    if (target === "#home") {
-      $("html, body").animate(
-        {
-          scrollTop: 0,
-        },
-        500
-      );
-    } else {
-      var offset = $(target).offset().top - 40;
-      $("html, body").animate(
-        {
-          scrollTop: offset,
-        },
-        500
-      );
+  // Active section detection
+  function updateActiveSection() {
+    const scrollPosition = $(window).scrollTop();
+    if (scrollPosition === 0) {
+      $(".navbar ul li a").removeClass("active");
+      $(".navbar ul li a[href='#home']").addClass("active");
+      return;
     }
-
-    $(".header ul li a").removeClass("active");
-    $(this).addClass("active");
-
-    // Close mobile menu after clicking
-    $(".header ul").removeClass("open");
-  });
-
-  // Initial content reveal
-  ScrollReveal({
-    distance: "100px",
-    duration: 2000,
-    delay: 200,
-  });
-
-  ScrollReveal().reveal(".header a, .profile-photo, .about-content, .education", {
-    origin: "left",
-  });
-  ScrollReveal().reveal(".header ul, .profile-text, .about-skills, .internship", {
-    origin: "right",
-  });
-  ScrollReveal().reveal(".project-title, .contact-title", {
-    origin: "top",
-  });
-  ScrollReveal().reveal(".projects, .contact", {
-    origin: "bottom",
-  });
-
-
-  // contact form response on whatsapp 
-
-  document.getElementById("whatsappForm").addEventListener("submit", function(e) {
-        e.preventDefault();
-
-        var name = document.getElementById("name").value.trim();
-        var email = document.getElementById("email").value.trim();
-        var subject = document.getElementById("subject").value.trim();
-        var message = document.getElementById("message").value.trim();
-
-        var fullMessage = `Name: ${name}%0AEmail: ${email}%0ASubject: ${subject}%0AMessage: ${message}`;
-
-        var phoneNumber = "918447564666"; // ← Replace with your WhatsApp number (with country code)
-        var whatsappURL = `https://wa.me/${phoneNumber}?text=${fullMessage}`;
-
-        window.open(whatsappURL, '_blank');
+    $("section").each(function () {
+      const target = $(this).attr("id"),
+        offset = $(this).offset().top,
+        height = $(this).outerHeight();
+      if (scrollPosition >= offset - 40 && scrollPosition < offset + height - 40) {
+        $(".navbar ul li a").removeClass("active");
+        $(".navbar ul li a[href='#" + target + "']").addClass("active");
+      }
     });
-
-
-// Update active header link on scroll
-function updateActiveSection() {
-  var scrollPosition = $(window).scrollTop();
-
-  if (scrollPosition === 0) {
-    $(".header ul li a").removeClass("active");
-    $(".header ul li a[href='#home']").addClass("active");
-    return;
   }
 
-  $("section").each(function () {
-    var target = $(this).attr("id");
-    var offset = $(this).offset().top;
-    var height = $(this).outerHeight();
+  // ScrollReveal animations
+  ScrollReveal({ distance: "100px", duration: 2000, delay: 200 });
+  ScrollReveal().reveal(".header a, .profile-photo, .about-content, .experience", { origin: "left" });
+  ScrollReveal().reveal(".navbar ul, .profile-text, .about-skills, .internship, .education", { origin: "right" });
+  ScrollReveal().reveal(".project-title, .contact-title", { origin: "top" });
+  ScrollReveal().reveal(".projects, .contact", { origin: "bottom" });
 
-    if (
-      scrollPosition >= offset - 40 &&
-      scrollPosition < offset + height - 40
-    ) {
-      $(".header ul li a").removeClass("active");
-      $(".header ul li a[href='#" + target + "']").addClass("active");
-    }
+
+(function(){
+    emailjs.init("YOUR_PUBLIC_KEY"); // replace with your EmailJS public key
+  })();
+
+  const contactForm = document.getElementById("contactForm");
+  const msg = document.getElementById("msg");
+
+  contactForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    // Send email to YOU (admin)
+    emailjs.sendForm("YOUR_SERVICE_ID", "contact_form_to_me", this)
+      .then(() => {
+        // After admin email, send auto-reply to user
+        emailjs.sendForm("YOUR_SERVICE_ID", "contact_form_auto_reply", this)
+          .then(() => {
+            msg.innerText = "✅ Message sent successfully! You will get a response within 3 working days.";
+            contactForm.reset();
+            setTimeout(() => msg.innerText = "", 5000);
+          })
+          .catch(err => {
+            msg.innerText = "❌ Error sending auto-reply.";
+            console.error(err);
+          });
+      })
+      .catch(err => {
+        msg.innerText = "❌ Error sending message. Try again.";
+        console.error(err);
+      });
   });
-}});
 
-// Show hidden projects and hide the See More button when clicked
-$("#see-more-btn").click(function() {
-  $(".hidden-project").slideDown(400); // Smoothly reveal hidden projects
-  $(this).fadeOut(300); // Hide the button smoothly
+  // -----------------------------------------------------
+
+  // Toggle hidden projects
+  $("#see-more-btn").click(function () {
+    $(".hidden-project").slideToggle(400);
+    $(this).text($(this).text() === "See More" ? "See Less" : "See More");
+  });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".timeline-item");
+
+  function reveal() {
+    const trigger = window.innerHeight * 0.85;
+    items.forEach((item, i) => {
+      const top = item.getBoundingClientRect().top;
+      if (top < trigger) {
+        setTimeout(() => item.classList.add("show"), i * 150);
+      }
+    });
+  }
+
+  window.addEventListener("scroll", reveal);
+  reveal(); // run on page load
+});
+  // Get the button
+const backToTopBtn = document.getElementById("backToTop");
+
+// Show button when scrolling down 200px
+window.onscroll = function() {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    backToTopBtn.style.display = "block";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
+};
+
+// Scroll to top when button clicked
+backToTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+

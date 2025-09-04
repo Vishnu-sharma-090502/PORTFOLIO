@@ -8,438 +8,592 @@
     <link rel="icon" href="https://i.ibb.co/zRsTj3p/Frame-1-37.png">
 
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" class="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" class="stylesheet">
+
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#000000" />
-
 </head> 
-
 <body>
 
-    <!-------------------------- Header Area -------------------------->
-    <header class="header-area">
+<!-------------------------- Header Area -------------------------->
+<header class="header-area">
   <div class="container">
     <div class="header">
-      <a href="/file/Resume/Vishnu-Resume.pdf" class="logo">
-        <img src="/file/signature.png" alt="" class="signature">
-        <i class="fa fa-bolt"></i>
+      <!-- Logo -->
+      <a href="/file/Resume/Vishnu-Resume.pdf" class="logo" aria-label="Download Resume">
+        <img src="/file/signature.png" alt="Vishnu Signature Logo" class="signature">
+        <i class="fa fa-bolt" aria-hidden="true"></i>
       </a>
 
-      <ul class="navbar">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education & Internship</a></li>
-        <li><a href="#certificate">certificate</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <!-- Navigation -->
+      <nav class="navbar" role="navigation" aria-label="Main Navigation">
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#certificate">Certificates</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
-      <div class="menu-btn">
+      <!-- Mobile menu button -->
+      <button class="menu-btn" aria-label="Toggle Menu">
         <i class="fas fa-bars"></i>
-      </div>
+      </button>
     </div>
   </div>
 </header>
 
- 
-    <!-------------------------- Home Page -------------------------->
-    <div class="FirstElement" id="home">
-        <div class="profile-photo">
-            <img src="/file/vishnu.jpg" alt="profile picture">
-        </div>
-        <div class="profile-text">
-            <h5>Hi I'm </h5><br>
-            <h1>Vishnu</h1><br>
-            <p>Welcome to my portfolio website! I'm a passionate and aspiring software engineer with a strong desire to create innovative solutions and push the boundaries of technology. With a deep love for coding and problem-solving, I am constantly seeking opportunities to learn and grow in this ever-evolving field</p>
+<!-------------------------- Home Page -------------------------->
+<div class="FirstElement" id="home">
+  <!-- Profile Image -->
+  <div class="profile-photo">
+    <img src="/file/vishnu.jpg" alt="Profile picture of Vishnu Sharma">
+  </div>
 
-            <div class="btn-group">
-                <a href="/file/Resume/RESUME-button.pdf" class="btn active">Download CV</a>
-                <a href="https://wa.me/918447564666?text=Hi%20Vishnu%2C%20I%20visited%20your%20portfolio%20and%20want%20to%20connect!" target="_blank" class="btn">Contact</a>
-            </div>
+  <!-- Profile Text -->
+  <div class="profile-text">
+    <h5>Hello 👋, I'm</h5>
+    <h1 class="glow-text">Vishnu Sharma</h1>
+    <p>
+      Welcome to my portfolio website! I'm a passionate and aspiring 
+      <strong>Software Engineer</strong> with a love for 
+      <em>problem-solving</em> and <em>innovation</em>.  
+      I aim to create impactful, user-friendly applications and 
+      continuously improve my skills in this ever-evolving tech world.
+    </p>
 
-
-            <div class="social">
-                <a href="mailto:vishnusharma090502@gmail.com"><i class="fa fa-envelope"></i></a>
-                <a href="https://github.com/Vishnu-sharma-090502"><i class="fa-brands fa-github"></i></a>
-                <a href="https://leetcode.com/u/Vishnu-Sharma-090502/"><i class="fa fa-code"></i></a>
-                <a href="https://www.linkedin.com/in/vishnu-sharma090502/""><i class="fa-brands fa-linkedin"></i></a>
-            </div>
-        </div>
+    <!-- Buttons -->
+    <div class="btn-group">
+      <a href="/file/Resume/RESUME-button.pdf" class="btn active" download>📄 Download CV</a>
+      <a href="https://wa.me/918447564666?text=Hi%20Vishnu%2C%20I%20visited%20your%20portfolio%20and%20want%20to%20connect!" 
+         target="_blank" class="btn">💬 Contact</a>
     </div>
 
-        <!-------------------------- About Section -------------------------->
-    <section class="about-area" id="about">
-        <div class="container">
-            <div class="about">
-                
-                <div class="about-content">
-                    <h4>About Me</h4>
-                    <ul>
-                      <li>I am currently pursuing my final year Bachelor's Degree in Computer science Engineering. I have built a solid foundation in software development, particularly in areas such as HTML, CSS, JavaScript.</li>
-                      <li> My expertise in these areas allows me to approach projects with confidence and deliver high-quality results. I have a strong belief in the value of continuous learning and staying adaptable in the ever-evolving world of software engineering.</li>
-                      <li> I actively seek out opportunities to expand my knowledge and skills, embracing new technologies and approaches. Feel free to explore my work and get in touch if you have any questions or opportunities to collaborate. </li>
-                    </ul>
-                </div>
-                                  
-                <div class="about-skills">
-                    <ul>
-                        <li>Name: Vishnu Sharma</li>
-                        <li>Age: 23</li>     
-                        <li>From: India</li>
-                        <li>Email: vishnusharma090502@gmail.com</li>
-                        <li>Availabiltiy: Fulltime</li>
-                        <li>Experience: &lt;1yr</li>
-                    </ul>
-                </div>
+    <!-- Social Links -->
+    <div class="social">
+      <a href="mailto:vishnusharma090502@gmail.com" title="Email"><i class="fa fa-envelope"></i></a>
+      <a href="https://github.com/Vishnu-sharma-090502" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://leetcode.com/u/Vishnu-Sharma-090502/" target="_blank" title="LeetCode"><i class="fa fa-code"></i></a>
+      <a href="https://www.linkedin.com/in/vishnu-sharma090502/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-------------------------- About Section -------------------------->
+<section class="about-area" id="about">
+  <div class="container">
+    <div class="about">
+
+      <!-- About Text -->
+      <div class="about-content">
+        <h4>About Me</h4>
+        <p>
+          I’m <span class="highlight">Vishnu Sharma</span>, a final-year 
+          <strong>Computer Science Engineering</strong> student passionate about 
+          creating <strong>responsive, user-friendly, and high-performance web applications</strong>.  
+        </p>
+        <p>
+          I specialize in <span class="highlight">HTML, CSS, JavaScript, React.js, and Python</span>, 
+          and I’m always eager to expand my skillset with modern technologies.  
+        </p>
+        <p>
+          I believe in <em>continuous learning</em>, adaptability, and building 
+          solutions that make a real-world impact. Feel free to explore my projects 
+          and connect for collaboration opportunities!
+        </p>
+        <p class="future-goal">
+          <strong>Future Goal:</strong> To become a <span class="highlight">Full Stack Developer</span>  
+          by mastering <span class="highlight">Node.js</span>, <span class="highlight">Express.js</span>,  
+          and modern <span class="highlight">Databases</span>, enabling me to build powerful end-to-end applications.  
+        </p>
+      </div>
+
+      <!-- About Details -->
+      <div class="about-skills">
+        <h5>Personal Info</h5>
+        <ul>
+          <li><strong>Name:</strong> Vishnu Sharma</li>
+          <li><strong>Age:</strong> 23</li>
+          <li><strong>From:</strong> India</li>
+          <li><strong>Email:</strong> <a href="mailto:vishnusharma090502@gmail.com">vishnusharma090502@gmail.com</a></li>
+          <li><strong>Availability:</strong> Full-time</li>
+          <li><strong>Experience:</strong> &lt; 1 yr</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-------------- Experience / Internship Section -------------->
+<section class="experience-content" id="experience">
+  <div class="container">
+    <div class="row">
+      <div class="experience">
+        <h3 class="title">Experience</h3>
+        <div class="row">
+          <div class="timeline-box">
+            <div class="timeline">
+
+              <!-- Timeline-item -->
+              <div class="timeline-item">
+                <div class="circle-dot"></div>
+                <h3 class="timeline-title">HONEYBEE DIGITAL</h3>
+                <h4 class="timeline-title">SEARCH ENGINE OPTIMIZATION INTERN</h4>
+                <h4 class="timeline-title">
+                  <i class="fa fa-calendar"></i> September 01, 2025 to Present
+                </h4>
+                <li class="timeline-text">
+                  At Honeybee Digital, I optimized website visibility through SEO strategies, including keyword research, on-page SEO, and technical improvements. I analyzed website traffic patterns using Google Analytics and Search Console, implementing changes that improved organic search rankings and boosted click-through rates. Additionally, I worked on creating SEO-friendly content and meta structures, ensuring faster indexing and better crawlability for client websites. Through this, I contributed to enhancing online presence, increasing audience reach, and driving measurable business growth for clients.
+                </li>
+              </div>
+
+              <!-- Timeline-item -->
+              <div class="timeline-item">
+                <div class="circle-dot"></div>
+                <h3 class="timeline-title">THE ENTREPRENEUR NETWORK</h3>
+                <h4 class="timeline-title">REACT.JS DEVELOPER</h4>
+                <h4 class="timeline-title">
+                  <i class="fa fa-calendar"></i> August 01, 2025 to Present
+                </h4>
+                <li class="timeline-text">
+                  At The Entrepreneur Network, I developed user-friendly web applications using React.js, focusing on responsive design and performance optimization. I collaborated with cross-functional teams to define, design, and ship new features, while also maintaining existing codebases. My role involved integrating RESTful APIs and ensuring seamless data flow between the front-end and back-end systems. Through code reviews and pair programming, I contributed to a culture of continuous improvement and knowledge sharing within the development team.
+                </li>
+              </div>
+
+              <!-- Timeline-item -->
+              <div class="timeline-item">
+                <div class="circle-dot"></div>
+                <h3 class="timeline-title">INSTITUTE OF SOUND AND VIBRATION</h3>
+                <h4 class="timeline-title">DEVELOPER</h4>
+                <h4 class="timeline-title">
+                  <i class="fa fa-calendar"></i> November 01, 2023 to April 30, 2024
+                </h4>
+                <li class="timeline-text">
+                  I developed a Python script using loop constructs to automate vibration data collection every 5 minutes for passing metro trains. I implemented real-time signal processing techniques to capture tunnel vibrations and extract frequency-based patterns. Additionally, I generated and visualized four distinct frequency-domain graphs per metro train to analyze the vibration impact over time. Through this work, I contributed to infrastructure monitoring by enabling systematic and automated data acquisition in a transportation tunnel environment. Furthermore, I enhanced data representation by creating interpretable visual plots to assist researchers in evaluating metro-induced vibrations.
+                </li>
+              </div>
+
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-------------- Education Section -------------->
+<section class="education-content" id="education">
+  <div class="container">
+    <div class="row">
+      <div class="education">
+        <h3 class="title">Education</h3>
+        <div class="row">
+          <div class="timeline-box">
+            <div class="timeline">
 
-        <!-------------- Education & Internship -------------->
-    <section class="education-content" id="education">
-        <div class="container">
-            <div class="row">
-                <div class="education ">
-                    <h3 class="title">Education</h3>
-                    <div class="row">
-                        <div class="timeline-box">
-                            <div class="timeline">
+              <!-- Timeline-item -->
+              <div class="timeline-item">
+                <div class="circle-dot"></div>
+                <h3 class="timeline-title">
+                  B.E [CSE]-77.9%
+                </h3>
+                <h4 class="timeline-title">DELHI TECHNICAL CAMPUS</h4>
+                <h4 class="timeline-title">
+                  <i class="fa fa-calendar"></i> 2022-2026
+                </h4>
+              </div> 
 
-                                <!-- Timeline-item -->
-                                <div class="timeline-item">
-                                    <div class="circle-dot"></div>
-                                    <h3 class="timeline-title">
-                                        B.E [CSE]-77.9%
-                                    </h3>
-                                    <h4 class="timeline-title">DELHI TECHNICAL CAMPUS</h4>
-                                    <h4 class="timeline-title">
-                                        <i class="fa fa-calendar"></i> 2022-2026
-                                    </h4>
-                                </div> 
-                                <!-- Timeline-item -->
-                                <div class="timeline-item">
-                                    <div class="circle-dot"></div>
-                                    <h3 class="timeline-title">Diploma  [EE]-74.34%</h3>
-                                    <h4 class="timeline-title"> PRINCE INSTITUTE OF INNOVATIVE TECHNOLOGY</h4>
-                                    <h4 class="timeline-title">
-                                        <i class="fa fa-calendar"></i> 2019-2021
-                                    </h4>
-                                </div>
-                                <!-- Timeline-item -->
-                                <div class="timeline-item">
-                                    <div class="circle-dot"></div>
-                                    <h3 class="timeline-title">
-                                        12th - 70%
-                                    </h3>
-                                    <h4 class="timeline-title">  CHANDRA SHEKHAR AZAD GOVT. BOYS SENIOR SECONDARY SCHOOL</h4>
-                                    <h4 class="timeline-title">
-                                        <i class="fa fa-calendar"></i> 2017-2019
-                                    </h4>
-                                </div>
-                                <div class="timeline-item">
-                                    <div class="circle-dot"></div>
-                                    <h3 class="timeline-title">
-                                        10th - 68%
-                                    </h3>
-                                    <h4 class="timeline-title">  CHANDRA SHEKHAR AZAD GOVT. BOYS SENIOR SECONDARY SCHOOL</h4>
-                                    <h4 class="timeline-title">
-                                        <i class="fa fa-calendar"></i> 2007-2017
-                                    </h4>
-                                </div>
+              <!-- Timeline-item -->
+              <div class="timeline-item">
+                <div class="circle-dot"></div>
+                <h3 class="timeline-title">Diploma [EE]-74.34%</h3>
+                <h4 class="timeline-title">PRINCE INSTITUTE OF INNOVATIVE TECHNOLOGY</h4>
+                <h4 class="timeline-title">
+                  <i class="fa fa-calendar"></i> 2019-2021
+                </h4>
+              </div>
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="internship">
-                    <h3 class="title">Internship</h3>
-                    <div class="row">
-                        <div class="timeline-box">
-                            <div class="timeline">
-                                
-                                <!-- Timeline-item -->
-                                <div class="timeline-item">
-                                    <div class="circle-dot"></div>
-                                    <h3 class="timeline-title">
-                                    INSTITUTE OF SOUND AND VIBRATION
-                                    </h3>
-                                    <h4 class="timeline-title"> DEVELOPER</h4>
-                                    <h4 class="timeline-title">
-                                        <i class="fa fa-calendar"></i> November 01, 2023 to APRIL 30, 2024
-                                    </h4>
-                                    <li class="timeline-text">I developed a Python script using loop constructs to automate vibration data collection every 5 minutes for passing metro trains. I implemented real-time signal processing techniques to capture tunnel vibrations and extract frequency-based patterns. Additionally, I generated and visualized four distinct frequency-domain graphs per metro train to analyze the vibration impact over time. Through this work, I contributed to infrastructure monitoring by enabling systematic and automated data acquisition in a transportation tunnel environment. Furthermore, I enhanced data representation by creating interpretable visual plots to assist researchers in evaluating metro-induced vibrations.
-                                    </li>
-                                </div>  
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              <!-- Timeline-item -->
+              <div class="timeline-item">
+                <div class="circle-dot"></div>
+                <h3 class="timeline-title">12th - 70%</h3>
+                <h4 class="timeline-title">CHANDRA SHEKHAR AZAD GOVT. BOYS SENIOR SECONDARY SCHOOL</h4>
+                <h4 class="timeline-title">
+                  <i class="fa fa-calendar"></i> 2017-2019
+                </h4>
+              </div>
+
+              <!-- Timeline-item -->
+              <div class="timeline-item">
+                <div class="circle-dot"></div>
+                <h3 class="timeline-title">10th - 68%</h3>
+                <h4 class="timeline-title">CHANDRA SHEKHAR AZAD GOVT. BOYS SENIOR SECONDARY SCHOOL</h4>
+                <h4 class="timeline-title">
+                  <i class="fa fa-calendar"></i> 2007-2017
+                </h4>
+              </div>
+
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!------------ Certificate Section ------------>
 <section class="certificate-content" id="certificate">
-    <div class="container-certificate">
-        <h3 class="title">Certificates</h3>
-        <div class="row">
-            <div class="timeline-box">
-                <div class="timeline">
+  <div class="container-certificate">
+    <h3 class="title">Certificates</h3>
+    <div class="row">
+      <div class="timeline-box">
+        <div class="timeline">
 
-                    <!-- Certificate Item -->
-                    <div class="timeline-item">
-                        <div class="circle-dot"></div>
-                        <h3 class="timeline-title">Develop a URL Shortener using Node.js</h3>
-                        <h4 class="timeline-title">LETS UPGRADE (in collaboration with NSDC, ITM Edutech & GDG MAD)</h4>
-                        <h4 class="timeline-title">
-                            <i class="fa fa-calendar"></i> AUGUST 06, 2025.
-                        </h4>
-                        <li class="timeline-text">Successfully completed the "Develop a URL Shortener using Node.js" program offered by LetsUpgrade. Learned to build a fully functional URL shortener application using Node.js, Express.js, and MongoDB. Gained practical skills in backend development, REST API creation, and URL mapping. The program also focused on input validation, routing, and deploying Node.js apps efficiently.</li>
-                        <a href="/file/Node.js certificate.pdf" download>
-                            <img src="/certificates/Node.js.png" alt="Node.js Certificate" class="certificate-img">
-                        </a>
-                    </div>
-
-                    <!-- Certificate Item -->
-                    <div class="timeline-item">
-                        <div class="circle-dot"></div>
-                        <h3 class="timeline-title">Data Visualization with python</h3>
-                        <h4 class="timeline-title">IBM (via Cognitive Class)</h4>
-                        <h4 class="timeline-title">
-                            <i class="fa fa-calendar"></i> AUGUST 04, 2025.
-                        </h4>
-                        <li class="timeline-text">Successfully completed the "Data Visualization with Python" course (DV0101EN), provided by IBM on CognitiveClass.ai. Gained practical skills in creating insightful and interactive data visualizations using libraries like Matplotlib, Seaborn, and Folium. Explored real-world datasets and learned to communicate data-driven stories effectively.</li>
-                        <a href="/file/IBM data visualization with python.pdf" download>
-                            <img src="/certificates/Data Visualization.png" alt="IBM-Data Visualization Certificate" class="certificate-img">
-                        </a>
-                    </div>
-
-                    <!-- Certificate Item -->
-                    <div class="timeline-item">
-                        <div class="circle-dot"></div>
-                        <h3 class="timeline-title">Data Analysis with Python</h3>
-                        <h4 class="timeline-title">IBM (via Cognitive Class)</h4>
-                        <h4 class="timeline-title">
-                            <i class="fa fa-calendar"></i> AUGUST 02, 2025.
-                        </h4>
-                        <li class="timeline-text">Successfully completed the "Data Analysis with Python" course offered by Cognitive Class, powered by IBM Developer Skills Network. Gained hands-on experience in analyzing and visualizing data using Python libraries such as Pandas, NumPy, and Matplotlib. Learned key concepts in data wrangling, exploratory data analysis (EDA), statistical analysis, and applied practical skills in solving real-world data science problems.</li>
-                        <a href="/file/IBM Data Analysis with python Certificate.pdf" download>
-                            <img src="/certificates/Data Analysis.png" alt="IBM-Data Analysis Certificate" class="certificate-img">
-                        </a>
-                    </div>
-
-                    <!-- Certificate Item -->
-                    <div class="timeline-item">
-                        <div class="circle-dot"></div>
-                        <h3 class="timeline-title">AI & Data Analytics Consultant</h3>
-                        <h4 class="timeline-title">TATA FORAGE</h4>
-                        <h4 class="timeline-title">
-                            <i class="fa fa-calendar"></i> JULY 28, 2025.
-                        </h4>
-                        <li class="timeline-text">Successfully completed the GenAI Powered Data Analytics Virtual Experience Program offered by Tata iQ on Forage. Gained hands-on experience in applying AI and machine learning techniques to solve real-world financial challenges. Conducted exploratory data analysis, built predictive models to assess credit card delinquency risk, and developed strategic recommendations using data-driven insights. Also explored ethical AI practices and the role of Generative AI in enhancing financial decision-making.</li>
-                        <a href="/file/TATA-Forage_certificate.pdf" download>
-                            <img src="/certificates/TATA-Forage.png" alt="TATA-Forage Certificate" class="certificate-img">
-                        </a>
-                    </div>
-
-                    <!-- Certificate Item -->
-                    <div class="timeline-item">
-                        <div class="circle-dot"></div>
-                        <h3 class="timeline-title">JavaScript Bootcamp</h3>
-                        <h4 class="timeline-title">LETS UPGRADE (in collaboration with NSDC, ITM Edutech & GDG MAD)</h4>
-                        <h4 class="timeline-title">
-                            <i class="fa fa-calendar"></i> JULY 14, 2025 to JULY 16, 2025.
-                        </h4>
-                        <li class="timeline-text">Successfully completed the JavaScript Bootcamp organized by LetsUpgrade, gaining hands-on experience in building responsive web pages using HTML, CSS, and JavaScript. Also explored front-end libraries like React and learned modern development practices for creating interactive user interfaces.</li>
-                        <a href="/file/javaScript certificate.pdf" download>
-                            <img src="/certificates/JavaScript Bootcamp.png" alt="JavaScript Certificate" class="certificate-img">
-                        </a>
-                    </div>
-
-                    <!-- Certificate Item -->
-                    <div class="timeline-item">
-                        <div class="circle-dot"></div>
-                        <h3 class="timeline-title">Web MasterClass</h3>
-                        <h4 class="timeline-title">DELHI TECHNICAL CAMPUS</h4>
-                        <h4 class="timeline-title">
-                            <i class="fa fa-calendar"></i> APRIL 09, 2025
-                        </h4>
-                        <li class="timeline-text">Successfully participated in a one-day workshop titled "Web MasterClass — Complete Web Design to Hosting & Optimization," organized by the Department of Computer Science & Engineering at Delhi Technical Campus on 9th April 2025.
-                        The workshop covered the complete journey of building a website, including design fundamentals, development best practices, hosting techniques, and optimization strategies.</li>
-                        <a href="/file/Web Masterclass certificate.pdf" download>
-                            <img src="/certificates/Web MasterClass.png" alt="Web MasterClass Certificate" class="certificate-img">
-                        </a>
-                    </div>
-
-                    <!-- Certificate Item -->
-                    <div class="timeline-item">
-                        <div class="circle-dot"></div>
-                        <h3 class="timeline-title">Machine Learning Demystified Workshop</h3>
-                        <h4 class="timeline-title">DELHI TECHNICAL CAMPUS</h4>
-                        <h4 class="timeline-title">
-                            <i class="fa fa-calendar"></i> APRIL 08, 2025
-                        </h4>
-                        <li class="timeline-text">Successfully participated in a one-day workshop titled "Machine Learning Demystified: From Basics to Deployment," organized by the Department of Computer Science & Engineering at Delhi Technical Campus on 8th April 2025.
-                        The workshop offered hands-on insights into the fundamentals of machine learning, model building, evaluation techniques, and real-world deployment strategies.</li>
-                        <a href="/file/Machine Learning Certificate.pdf" download>
-                            <img src="/certificates/Machine Learning.png" alt="Machine Learning Demystified Workshop Certificate" class="certificate-img">
-                        </a>
-                    </div>
-
-
-                    <!-- Certificate Item -->
-                    <div class="timeline-item">
-                        <div class="circle-dot"></div>
-                        <h3 class="timeline-title">CyberSecurity</h3>
-                        <h4 class="timeline-title">CISCO (Networking Academy)</h4>
-                        <h4 class="timeline-title">
-                            <i class="fa fa-calendar"></i> APRIL 27, 2024
-                        </h4>
-                        <li class="timeline-text">Completed the "Cybersecurity Essentials" course from Cisco Networking Academy, gaining practical knowledge of cyber threats, principles of confidentiality, integrity, and availability, as well as key technologies and legal aspects used to protect and defend networks.</li>
-                        <a href="/file/cisco-certificate.pdf" download>
-                            <img src="/certificates/cisco.png" alt="Cisco Certificate" class="certificate-img">
-                        </a>
-                    </div>
-
-                    <!-- Certificate Item -->
-                    <div class="timeline-item">
-                        <div class="circle-dot"></div>
-                        <h3 class="timeline-title">Python Script Developer</h3>
-                        <h4 class="timeline-title">INSTITUTE OF SOUND AND VIBRATION</h4>
-                        <h4 class="timeline-title">
-                            <i class="fa fa-calendar"></i> November 01, 2023 to APRIL 30, 2024
-                        </h4>
-                        <li class="timeline-text">Completed a six-month internship at the Institute of Sound and Vibration, where I developed and deployed a Python-based automation system for vibration data collection. Gained hands-on experience in real-time signal processing, frequency-domain analysis, and data visualization to monitor structural responses in metro tunnel environments. Strengthened my technical skills in automation, Python scripting, and infrastructure monitoring.</li>
-                        <a href="/file/ISV intership certificate.pdf" download>
-                            <img src="/certificates/ISV-Internship .png" alt="Cisco Certificate" class="certificate-img">
-                        </a>
-                    </div>
-
-                </div>
+          <!-- Certificate Item 1 -->
+          <div class="timeline-item show">
+            <div class="circle-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-texts">
+                <h3 class="timeline-title">Develop a URL Shortener using Node.js</h3>
+                <h4 class="timeline-title">LETS UPGRADE (NSDC, ITM Edutech & GDG MAD)</h4>
+                <h4 class="timeline-title"><i class="fa fa-calendar"></i> AUGUST 06, 2025</h4>
+                <p class="timeline-text">Successfully completed the "Develop a URL Shortener using Node.js" program offered by LetsUpgrade.</p>
+              </div>
+              <div class="timeline-image">
+                <a href="/file/Node.js certificate.pdf" download>
+                  <img src="/certificates/Node.js.png" alt="Node.js Certificate" class="certificate-img">
+                </a>
+              </div>
             </div>
+          </div>
+
+          <!-- Certificate Item 2 -->
+          <div class="timeline-item show">
+            <div class="circle-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-texts">
+                <h3 class="timeline-title">Data Visualization with Python</h3>
+                <h4 class="timeline-title">IBM (via Cognitive Class)</h4>
+                <h4 class="timeline-title"><i class="fa fa-calendar"></i> AUGUST 04, 2025</h4>
+                <p class="timeline-text">Completed the course DV0101EN, gaining practical skills in interactive data visualizations using Matplotlib, Seaborn, and Folium.</p>
+              </div>
+              <div class="timeline-image">
+                <a href="/file/IBM data visualization with python.pdf" download>
+                  <img src="/certificates/Data Visualization.png" alt="IBM-Data Visualization Certificate" class="certificate-img">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificate Item 3 -->
+          <div class="timeline-item show">
+            <div class="circle-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-texts">
+                <h3 class="timeline-title">Data Analysis with Python</h3>
+                <h4 class="timeline-title">IBM (via Cognitive Class)</h4>
+                <h4 class="timeline-title"><i class="fa fa-calendar"></i> AUGUST 02, 2025</h4>
+                <p class="timeline-text">Gained hands-on experience in analyzing and visualizing data using Pandas, NumPy, and Matplotlib.</p>
+              </div>
+              <div class="timeline-image">
+                <a href="/file/IBM Data Analysis with python Certificate.pdf" download>
+                  <img src="/certificates/Data Analysis.png" alt="IBM-Data Analysis Certificate" class="certificate-img">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificate Item 4 -->
+          <div class="timeline-item show">
+            <div class="circle-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-texts">
+                <h3 class="timeline-title">AI & Data Analytics Consultant</h3>
+                <h4 class="timeline-title">TATA FORAGE</h4>
+                <h4 class="timeline-title"><i class="fa fa-calendar"></i> JULY 28, 2025</h4>
+                <p class="timeline-text">Completed the GenAI Powered Data Analytics Virtual Experience Program, conducting exploratory analysis and building predictive models.</p>
+              </div>
+              <div class="timeline-image">
+                <a href="/file/TATA-Forage_certificate.pdf" download>
+                  <img src="/certificates/TATA-Forage.png" alt="TATA-Forage Certificate" class="certificate-img">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificate Item 5 -->
+          <div class="timeline-item show">
+            <div class="circle-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-texts">
+                <h3 class="timeline-title">JavaScript Bootcamp</h3>
+                <h4 class="timeline-title">LETS UPGRADE</h4>
+                <h4 class="timeline-title"><i class="fa fa-calendar"></i> JULY 14–16, 2025</h4>
+                <p class="timeline-text">Completed the bootcamp organized by LetsUpgrade, gaining hands-on experience in building responsive web pages with HTML, CSS, and JS.</p>
+              </div>
+              <div class="timeline-image">
+                <a href="/file/javaScript certificate.pdf" download>
+                  <img src="/certificates/JavaScript Bootcamp.png" alt="JavaScript Certificate" class="certificate-img">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificate Item 6 -->
+          <div class="timeline-item show">
+            <div class="circle-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-texts">
+                <h3 class="timeline-title">Web MasterClass</h3>
+                <h4 class="timeline-title">DELHI TECHNICAL CAMPUS</h4>
+                <h4 class="timeline-title"><i class="fa fa-calendar"></i> APRIL 09, 2025</h4>
+                <p class="timeline-text">Participated in a one-day workshop on complete web design, hosting, and optimization.</p>
+              </div>
+              <div class="timeline-image">
+                <a href="/file/Web Masterclass certificate.pdf" download>
+                  <img src="/certificates/Web MasterClass.png" alt="Web MasterClass Certificate" class="certificate-img">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificate Item 7 -->
+          <div class="timeline-item show">
+            <div class="circle-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-texts">
+                <h3 class="timeline-title">Machine Learning Demystified Workshop</h3>
+                <h4 class="timeline-title">DELHI TECHNICAL CAMPUS</h4>
+                <h4 class="timeline-title"><i class="fa fa-calendar"></i> APRIL 08, 2025</h4>
+                <p class="timeline-text">Gained insights into ML fundamentals, model building, and deployment strategies.</p>
+              </div>
+              <div class="timeline-image">
+                <a href="/file/Machine Learning Certificate.pdf" download>
+                  <img src="/certificates/Machine Learning.png" alt="Machine Learning Workshop Certificate" class="certificate-img">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificate Item 8 -->
+          <div class="timeline-item show">
+            <div class="circle-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-texts">
+                <h3 class="timeline-title">CyberSecurity</h3>
+                <h4 class="timeline-title">CISCO (Networking Academy)</h4>
+                <h4 class="timeline-title"><i class="fa fa-calendar"></i> APRIL 27, 2024</h4>
+                <p class="timeline-text">Completed the "Cybersecurity Essentials" course, learning about threats, CIA triad, and defense technologies.</p>
+              </div>
+              <div class="timeline-image">
+                <a href="/file/cisco-certificate.pdf" download>
+                  <img src="/certificates/cisco.png" alt="Cisco Certificate" class="certificate-img">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certificate Item 9 -->
+          <div class="timeline-item show">
+            <div class="circle-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-texts">
+                <h3 class="timeline-title">Python Script Developer (Internship)</h3>
+                <h4 class="timeline-title">INSTITUTE OF SOUND AND VIBRATION</h4>
+                <h4 class="timeline-title"><i class="fa fa-calendar"></i> NOV 01, 2023 – APR 30, 2024</h4>
+                <p class="timeline-text">Completed a six-month internship developing a Python automation system for vibration data collection and analysis.</p>
+              </div>
+              <div class="timeline-image">
+                <a href="/file/ISV intership certificate.pdf" download>
+                  <img src="/certificates/ISV-Internship .png" alt="ISV Internship Certificate" class="certificate-img">
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
     </div>
+  </div>
 </section>
 
-        <!--Project section-->
-
-        <section class="project-content" id="projects">
-        <div class="container">
-            <div class="project-title">
-            <h4>My Projects</h4>
-            <p>Discover my projects — just click to see how creativity transforms into innovation.</p>
-            </div>
-            <div class="projects">
-            <!-- Show only first 3 projects initially -->
-                <!-- 1st Project -->
-                <div class="project">
-                <a href="https://portfolio-two-eosin-99.vercel.app/"><i class="fa fa-desktop"></i>
-                <h4>Portfolio Website</h4>
-                <p>Created a portfolio website using HTML, CSS, and JavaScript, It serves as a platform to introduce myself, share my projects, and provide information about my  education and internship.</p>
-                </a>
-                </div>
-
-                <!-- 2nd Project -->
-                <div class="project">
-                <a href="#" onclick="alert('Not hosted yet. You can check this project on my GitHub'); return false;">
-                    <i class="fas fa-user-plus"></i>
-                    <h4>Netflix Clone</h4>
-                    <p>
-                    StreamVerse is your ultimate destination for non-stop entertainment. Dive into a world of thrilling series, blockbuster movies, and exclusive originals — all in one place. With a sleek design and binge-worthy content, StreamVerse makes watching feel effortless and exciting!
-                    </p>
-                </a>
-                </div>
-
-                <!-- 3rd Project -->
-                <div class="project">
-                <a href="https://cartnovashop.netlify.app/"><i class="fas fa-shopping-cart"></i>
-                    <h4>CartNova</h4>
-                    <p>CartNova is your go-to hub for smart gadgets and home essentials. We mix tech with fun, offering quality products in a playful, engaging way. Explore innovative electronics with a splash of cartoonish creativity — only at CartNova!</p>
-                </a>
-                </div>
-
-            <!-- Hidden projects initially -->
-            <div class="project hidden-project">
-                <a href="https://amazon-tau-ecru.vercel.app/"><i class="fas fa-shopping-cart"></i>
-                <h4>Amazon Clone</h4>
-                <p>This is a frontend Amazon clone built using HTML and CSS. It replicates the main layout and design of the Amazon homepage. Includes header, search bar, product sections, and footer. Fully responsive and styled with hover effects for a real feel. Created to enhance my frontend development and UI design skills.</p>
-            </a>
-            </div>
-
-            <div class="project hidden-project">
-                <a href="https://login-signin-page-three.vercel.app/"><i class="fas fa-user-plus"></i>
-                <h4>Login-Signin Page</h4>
-                <p>A modern, responsive login and signup page built with HTML, CSS, and JavaScript. Features smooth transitions, clean UI, and basic frontend validation — perfect as a starter template for authentication pages.</p>
-                </a>
-            </div>
-
-            <div class="project hidden-project">
-                <a href="https://news-channel-links.vercel.app/"><i class="fas fa-newspaper"></i>
-                <h4>News-Channel Links</h4>
-                <p>This is a clean and modern news channel links website built using HTML, CSS, and JavaScript. It provides quick access to live news channels with a simple, user-friendly interface. Designed to be responsive and lightweight, it offers a smooth browsing experience across devices.</p>
-                </a>
-            </div>
-
-            <div class="project hidden-project">
-                <a href="https://tic-tac-toe-game-eight-mu.vercel.app/"><i class="fas fa-gamepad"></i>
-                <h4>TicTacToe</h4>
-                <p>This is a stylish, interactive Tic Tac Toe game built with HTML, CSS, and JavaScript. It features a modern design, smooth animations, and clear game logic — making it fun to play and a great example of combining core web technologies.</p>
-                </a>
-            </div>
-
-            <div class="project hidden-project">
-                <a href="https://rock-paper-scissor-game-phi-one.vercel.app/"><i class="fas fa-gamepad"></i>
-                <h4>Rock-Paper-Scissor</h4>
-                <p>A fun and interactive web-based game where you can play Rock Paper Scissors against the computer. Built with HTML, CSS, and JavaScript, this project showcases my skills in front-end development and dynamic user interactions. Check it out and test your luck!</p>
-                </a>
-            </div>
-
-            <div class="project hidden-project">
-                <a href="https://inventory-omega-ochre.vercel.app/"><i class="fas fa-clipboard-list"></i>
-                <h4>Inventory</h4>
-                <p>This project is a simple inventory web app that helps you add, manage, and track your home products. You can store items with quantity and type, upload images, and create a cart for things you need to buy — all saved locally in your browser for easy access anytime.</p>
-                </a>
-            </div>
-
-            <div class="project hidden-project">
-                <a href="https://currency-convertor-mauve-eight.vercel.app/"><i class="fas fa-money-bill-wave"></i>
-                <h4>Currency Convertor</h4>
-                <p>This Currency Converter is a user-friendly web application designed to help users instantly convert between different international currencies. Built with HTML, CSS, and JavaScript, the tool fetches real-time exchange rates to provide accurate and up-to-date conversions.</p>
-                </a>
-            </div>
-
-            </div>
-                <button id="see-more-btn" class="btn">See More</button>
-            </div>
-        </section>
-        <!-------------------------- Contact Me -------------------------->
-
-<section class="contact-content" id="contact">
-    <div class="container">
-        <div class="contact-title">
-            <h4>Contact Me</h4>
-            <p>Get In Touch</p>
-        </div>
-        <div class="contact">
-            <form id="whatsappForm">
-                <input type="text" id="name" placeholder="Name" required>
-                <input type="email" id="email" placeholder="Email" required>
-                <input type="text" id="subject" placeholder="Subject">
-                <textarea id="message" placeholder="Message"></textarea>
-                <input type="submit" value="Send Message" class="submit">
-            </form>
-            <span id="msg"></span>
-        </div>
+<!-- Project Section -->
+<section class="project-content" id="projects">
+  <div class="container">
+    <div class="project-title">
+      <h4>My Projects</h4>
+      <p>Discover my projects — just click to see how creativity transforms into innovation.</p>
     </div>
-</section>       
-    <!-------------------------- JS -------------------------->
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="script.js"></script>
 
+    <div class="projects">
+      <!-- 1st Project -->
+      <div class="project fade-in">
+        <a href="https://vishnu-port.vercel.app/" target="_blank">
+          <i class="fa fa-desktop"></i>
+          <h4>Portfolio Website</h4>
+          <p>
+            Created a portfolio website using HTML, CSS, and JavaScript. It
+            serves as a platform to introduce myself, share my projects, and
+            provide information about my education and internship.
+          </p>
+        </a>
+      </div>
+
+      <!-- 2nd Project -->
+      <div class="project fade-in">
+        <a href="https://netflix-clone-byvishnu.vercel.app/" target="_blank">
+          <i class="fas fa-user-plus"></i>
+          <h4>Netflix Clone</h4>
+          <p>
+            StreamVerse is your ultimate destination for non-stop entertainment.
+            Dive into thrilling series, blockbuster movies, and exclusive
+            originals with a sleek design and binge-worthy experience.
+          </p>
+        </a>
+      </div>
+
+      <!-- 3rd Project -->
+      <div class="project fade-in">
+        <a href="https://cartnovashop.netlify.app/" target="_blank">
+          <i class="fas fa-shopping-cart"></i>
+          <h4>CartNova</h4>
+          <p>
+            CartNova is your go-to hub for smart gadgets and home essentials,
+            blending tech with playful creativity through an engaging shopping
+            experience.
+          </p>
+        </a>
+      </div>
+
+      <!-- Hidden Projects -->
+      <div class="project hidden-project fade-in">
+        <a href="https://amazon-tau-ecru.vercel.app/" target="_blank">
+          <i class="fas fa-shopping-cart"></i>
+          <h4>Amazon Clone</h4>
+          <p>
+            A responsive Amazon homepage clone built with HTML and CSS,
+            replicating layout, search, product sections, and footer with
+            hover effects.
+          </p>
+        </a>
+      </div>
+
+      <div class="project hidden-project fade-in">
+        <a href="https://login-signin-page-three.vercel.app/" target="_blank">
+          <i class="fas fa-user-plus"></i>
+          <h4>Login-Signin Page</h4>
+          <p>
+            A modern login and signup page built with HTML, CSS, and JS. Smooth
+            transitions, clean UI, and basic validation included.
+          </p>
+        </a>
+      </div>
+
+      <div class="project hidden-project fade-in">
+        <a href="https://tic-tac-toe-game-eight-mu.vercel.app/" target="_blank">
+          <i class="fas fa-gamepad"></i>
+          <h4>TicTacToe</h4>
+          <p>
+            Interactive Tic Tac Toe game with a sleek design, animations, and
+            clear game logic built using HTML, CSS, and JavaScript.
+          </p>
+        </a>
+      </div>
+
+      <div class="project hidden-project fade-in">
+        <a href="https://rock-paper-scissor-game-phi-one.vercel.app/" target="_blank">
+          <i class="fas fa-gamepad"></i>
+          <h4>Rock-Paper-Scissor</h4>
+          <p>
+            Play Rock Paper Scissors against the computer in this fun,
+            interactive project built with HTML, CSS, and JavaScript.
+          </p>
+        </a>
+      </div>
+
+      <div class="project hidden-project fade-in">
+        <a href="https://inventory-omega-ochre.vercel.app/" target="_blank">
+          <i class="fas fa-clipboard-list"></i>
+          <h4>Inventory</h4>
+          <p>
+            A lightweight inventory web app to manage products, store items,
+            upload images, and track cart details locally.
+          </p>
+        </a>
+      </div>
+
+      <div class="project hidden-project fade-in">
+        <a href="https://currency-convertor-mauve-eight.vercel.app/" target="_blank">
+          <i class="fas fa-money-bill-wave"></i>
+          <h4>Currency Converter</h4>
+          <p>
+            A real-time currency converter fetching exchange rates via JS,
+            built with responsive HTML and CSS.
+          </p>
+        </a>
+      </div>
+    </div>
+
+    <button id="see-more-btn" class="btn">See More</button>
+  </div>
+</section>
+<!-------------------------- Contact Me -------------------------->
+<section class="contact-content" id="contact">
+  <div class="container">
+    <div class="contact-title">
+      <h4>Contact Me</h4>
+      <p>Get In Touch</p>
+    </div>
+
+    <div class="contact-wrapper">
+      <!-- Left side: form -->
+      <form class="contact-form" id="contactForm">
+        <input type="text" id="name" name="from_name" placeholder="Name" required>
+        <input type="email" id="email" name="reply_to" placeholder="Email" required>
+        <input type="text" id="subject" name="subject" placeholder="Subject">
+        <textarea id="message" name="message" placeholder="Message"></textarea>
+        <input type="submit" value="Send Message" class="submit">
+      </form>
+      <p id="msg"></p>
+
+      <!-- Right side: info -->
+      <!-- <div class="contact-info">
+        <h5>Let’s Connect</h5>
+        <p><i class="fa fa-envelope"></i> 
+          <a href="mailto:vishnusharma090502@gmail.com">vishnusharma090502@gmail.com</a>
+        </p>
+        <p><i class="fa fa-phone"></i> 
+          <a href="tel:+918447564666">+91 8447564666</a>
+        </p>
+        <p><i class="fab fa-linkedin"></i>
+          <a href="https://www.linkedin.com/in/vishnu-sharma090502/" target="_blank">LinkedIn</a>
+        </p>
+      </div> -->
+    </div>
+
+    <span id="msg"></span>
+  </div>
+</section>
+
+<!-- Back to Top Button -->
+<button id="backToTop" title="Go to top"><i class="fa-solid fa-circle-arrow-up"></i></button>
+
+
+<!-------------------------- JS -------------------------->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" 
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" 
+        crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NG6PPXTJXP"></script>
@@ -447,16 +601,28 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-NG6PPXTJXP');
 </script>
+
+<!-- Your custom JS -->
+<script src="script.js"></script>
+
+
+<!-------------------------- Footer section -------------------------->
+<footer class="footer">
+  <div class="footer-container">
+    <p class="message">🚀 Thanks for visiting — keep learning & happy coding!</p>
     
-
-    <!-------------------------- Footer section -------------------------->
-   <footer class="footer">
-    <small class="message">Thanks for visiting and happy coding!</small>
-    <small class="copyright">&copy; Copyright 2025. All rights reserved.</small>
-   </footer>
-
+    <div class="footer-socials">
+      <a href="https://www.linkedin.com/in/vishnu-sharma090502/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/vishnusharma" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:vishnu@example.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    
+    <p class="copyright">
+      &copy; 2025 Vishnu Sharma. All rights reserved.
+    </p>
+  </div>
+</footer>
 </body>
 </html>
