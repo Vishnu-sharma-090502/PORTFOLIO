@@ -57,7 +57,7 @@ ScrollReveal().reveal(".timeline-item", { origin: "bottom", interval: 200 });
 
 // EmailJS integration
 (function(){
-    emailjs.init("hgBbZ0bA0qBuXfon7"); // replace with your EmailJS public key
+    emailjs.init("sckMEFfS_3xtyOe7w"); // replace with your EmailJS public key
   })();
 
   const contactForm = document.getElementById("contactForm");
@@ -65,12 +65,13 @@ ScrollReveal().reveal(".timeline-item", { origin: "bottom", interval: 200 });
 
   contactForm.addEventListener("submit", function(e) {
     e.preventDefault();
-
+    msg.innerText = "⏳ Sending your message it may take some time...";  
+    
     // Send email to YOU (admin)
-    emailjs.sendForm("YOUR_SERVICE_ID", "contact_form_to_me", this)
+    emailjs.sendForm("service_exdcu53", "template_wpt1drt", this)
       .then(() => {
         // After admin email, send auto-reply to user
-        emailjs.sendForm("YOUR_SERVICE_ID", "contact_form_auto_reply", this)
+        emailjs.sendForm("service_exdcu53", "template_tg05hgg", this)
           .then(() => {
             msg.innerText = "✅ Message sent successfully! You will get a response within 3 working days.";
             contactForm.reset();
