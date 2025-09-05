@@ -46,7 +46,7 @@ $(function () {
   }
 
 // ScrollReveal animations
-ScrollReveal({ distance: "100px", duration: 2000, delay: 200 });
+ScrollReveal({ distance: "50px", duration: 1200, delay: 100, once: true });
 ScrollReveal().reveal(".header a, .profile-photo, .about-content, .experience", { origin: "left" });
 ScrollReveal().reveal(".navbar ul, .profile-text, .about-skills, .internship, .education", { origin: "right" });
 ScrollReveal().reveal(".project-title, .contact-title, .title", { origin: "top" });
@@ -55,9 +55,9 @@ ScrollReveal().reveal(".projects, .contact, .certificate-content", { origin: "bo
 // Certificates timeline items (staggered reveal)
 ScrollReveal().reveal(".timeline-item", { origin: "bottom", interval: 200 });
 
-
+// EmailJS integration
 (function(){
-    emailjs.init("YOUR_PUBLIC_KEY"); // replace with your EmailJS public key
+    emailjs.init("hgBbZ0bA0qBuXfon7"); // replace with your EmailJS public key
   })();
 
   const contactForm = document.getElementById("contactForm");

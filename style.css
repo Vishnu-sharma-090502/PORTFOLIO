@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap');
-
 * {
   margin: 0;
   padding: 0;
@@ -147,6 +145,7 @@ body {
   flex-wrap: wrap;
   gap: 3rem;
 }
+.FirstElement .profile-photo { will-change: transform; }
 
 /* Profile Photo */
 .FirstElement .profile-photo {
@@ -196,6 +195,8 @@ body {
 }
 
 /* Glowing Text */
+.glow-text { will-change: text-shadow; }
+
 .glow-text {
   color: #fed700;
   text-shadow: 0 0 10px #fed700, 0 0 20px #fed700, 0 0 30px #ffea80;
@@ -951,6 +952,7 @@ body {
 #backToTop i {
   display: inline-block;
   animation: bounce 1s infinite;
+  will-change: transform;
 }
 
 /* Bounce animation */
@@ -970,10 +972,18 @@ body {
 
 /* Small devices (phones, up to 767px) */
 @media (max-width: 767px) {
+
+  .header-area.sticky,
+  .projects,
+  .contact-content {
+    backdrop-filter: none;
+    background: rgba(32, 32, 32, 0.95); /* fallback */
+  }
   .container {
     width: 100%;
     max-width: 95%;
     padding: 0 15px;
+    margin: auto;
   }
 
   .menu-btn {
@@ -1139,6 +1149,7 @@ body {
   .container {
     width: 95%;
     max-width: 750px;
+    margin: auto;
   }
 
   .FirstElement {
@@ -1172,6 +1183,7 @@ body {
   .container {
     width: 95%;
     max-width: 970px;
+    margin: auto;
   }
 
   .profile-text h1 {
