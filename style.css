@@ -51,35 +51,37 @@ body {
   align-items: center;
 }
 
-/* Logo */
+/* Logo container */
 .logo {
   display: flex;
   align-items: center;
   position: relative;
-  font-size: 26px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #fff;
 }
 
-.logo .fa-bolt {
-  color: #fed700;
-  font-size: 19px;
-  position: absolute;
-  top: 50%;
-  left: 80%;
-  transform: translate(-50%, -50%);
-}
-
+/* Signature image */
 .signature {
   width: 140px;
   height: auto;
-  margin-right: 10px;
   transition: transform 0.3s ease;
 }
 
 .signature:hover {
   transform: scale(1.05);
+}
+
+/* Bolt icon */
+.logo-alt {
+  position: absolute;
+  left: 88%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  font-size: 19px;
+  color: #fed700;
+  text-decoration: none;
+}
+
+.logo-alt:hover {
+  transform: translate(-50%, -50%) scale(1.2);
 }
 
 /* Navbar */
@@ -1090,7 +1092,7 @@ body {
   }
 
   .profile-text {
-    width: 100%;
+    width: 80%;
     padding: 20px 0;
   }
 
